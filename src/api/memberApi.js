@@ -1,7 +1,10 @@
 import axios from "axios";
-import { API_SERVER_HOST } from "./reviewApi";
+// import { API_SERVER_HOST } from "./reviewApi";
 import jwtAxios from "../util/jwtUtil";
 
+const API_SERVER_HOST = process.env.REACT_APP_API_BASE_URL;
+console.log("Environment Variables:", process.env);
+console.log("host:", API_SERVER_HOST);
 const host = `${API_SERVER_HOST}/api/member`;
 
 export const loginPost = async (loginParam) => {
